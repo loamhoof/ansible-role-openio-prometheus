@@ -70,7 +70,7 @@ scrape_configs:
 
     # ALL: Register job as service
     - source_labels: [module]
-      regex: .*
+      regex: (?!icmpcheck)(.+)
       target_label: service
 
     # TCPCheck, OIOPING: Register the service type in `service`
